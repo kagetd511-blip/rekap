@@ -102,13 +102,67 @@ opacity:.25;
 pointer-events:none;
 }
 
+/* ========================= */
 /* LOGO PREMIUM */
+/* ========================= */
+
 .logo{
-width:60px;
-height:42px;
-border-radius:14px;
-overflow:hidden;
-position:relative;
+    width:70px;
+    height:42px;
+
+    border-radius:14px;
+    overflow:hidden;
+
+    position:relative;
+
+    /* GLASS EFFECT */
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,0.25),
+        rgba(255,255,255,0.08)
+    );
+
+    backdrop-filter:blur(12px);
+
+    /* BORDER HALUS */
+    border:1px solid rgba(255,255,255,0.25);
+
+    /* SHADOW DEPTH */
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.3);
+
+    /* BIAR LEBIH HIDUP */
+    transition:all .3s ease;
+}
+
+/* LOGO IMAGE */
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position:relative;
+    z-index:2;
+}
+
+/* SHINE EFFECT */
+.logo::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+
+    transition:0.6s;
 }
 
 /* MENU BUTTON ULTRA */
@@ -406,22 +460,6 @@ text-shadow:0 0 8px rgba(255,255,255,0.15);
 font-size:10px;
 margin-top:4px;
 opacity:.6;
-}
-
-/* ========================= */
-/* LOGO SAMAR DI CARD */
-/* ========================= */
-
-.balance-card{
-position:relative;
-overflow:hidden;
-
-/* logo background */
-background-image:url('assets/logo.png');
-background-repeat:no-repeat;
-background-position:right -20px bottom -20px;
-background-size:120px;
-
 }
 
 /* overlay biar lebih samar */
