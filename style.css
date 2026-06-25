@@ -408,6 +408,87 @@ margin-top:4px;
 opacity:.6;
 }
 
+/* ========================= */
+/* LOGO SAMAR DI CARD */
+/* ========================= */
+
+.balance-card{
+position:relative;
+overflow:hidden;
+
+/* logo background */
+background-image:url('logo.png');
+background-repeat:no-repeat;
+background-position:right -20px bottom -20px;
+background-size:120px;
+
+}
+
+/* overlay biar lebih samar */
+.balance-card::after{
+content:"";
+position:absolute;
+inset:0;
+
+background:rgba(2,6,23,0.7); /* gelapin */
+
+pointer-events:none;
+}
+
+/* ========================= */
+/* BANK HORIZONTAL */
+/* ========================= */
+
+.bank-container{
+margin-top:15px;
+
+display:flex;
+gap:10px;
+
+overflow-x:auto;
+padding-bottom:2px;
+}
+
+/* HILANGIN SCROLLBAR (BIAR CLEAN) */
+.bank-container::-webkit-scrollbar{
+display:none;
+}
+
+/* MINI CARD */
+.bank-item{
+min-width:120px;
+padding:10px;
+
+border-radius:14px;
+
+/* GLASS */
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:
+0 4px 15px rgba(0,0,0,0.5);
+
+/* BIAR RAPI */
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* NAMA */
+.bank-name{
+font-size:10px;
+opacity:.6;
+}
+
+/* SALDO */
+.bank-amount{
+font-size:12px;
+font-weight:600;
+margin-top:3px;
+}
+
 /* CONTAINER */
 .stats-card{
 display:flex;
