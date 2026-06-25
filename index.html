@@ -1,0 +1,80 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<title>Finance App</title>
+</head>
+
+<div class="header">
+<div class="logo"><img src="logo.png"></div>
+<div class="menu-btn" onclick="openMenu()">☰</div>
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar glass" id="sidebar">
+<a href="#">👤 Profil Data</a>
+<a href="#">📂 Kategori</a>
+<a href="#">🧾 Riwayat</a>
+<a href="#">📈 Rekap Pemasukan</a>
+<a href="#">📉 Rekap Pengeluaran</a>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<div class="container">
+
+<!-- SALDO -->
+<div class="balance-card">
+<div class="balance-title">Total Saldo</div>
+<div class="balance" id="saldo">Rp12.500.000</div>
+<div class="balance-growth">▲ +15% bulan ini</div>
+</div>
+
+<div class="stats-card">
+
+  <div class="stat income-box">
+    <label>Pemasukan</label>
+    <h3 class="income">Rp15.000.000</h3>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="stat expense-box">
+    <label>Pengeluaran</label>
+    <h3 class="expense">Rp2.500.000</h3>
+  </div>
+
+</div>
+
+<!-- FORM -->
+<div class="form-card glass">
+<h3>Tambah Transaksi</h3>
+
+<select id="type" class="input">
+<option value="in">Pemasukan</option>
+<option value="out">Pengeluaran</option>
+</select>
+
+<input id="inputText" class="input" placeholder="Contoh: Makan 20rb">
+
+<button class="btn" onclick="addTransaksi()">Simpan</button>
+</div>
+
+<!-- LIST -->
+<div class="section-title">Riwayat Transaksi</div>
+<div id="list"></div>
+
+</div>
+
+<!-- NAV -->
+<div class="bottom-nav">
+<div class="nav-item">🏠 Home</div>
+<div class="nav-item">⚙️ Setting</div>
+</div>
+
+<script src="script.js"></script>
+</body>
