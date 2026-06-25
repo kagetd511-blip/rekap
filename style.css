@@ -417,7 +417,7 @@ position:relative;
 overflow:hidden;
 
 /* logo background */
-background-image:url('logo.png');
+background-image:url('assets/logo.png');
 background-repeat:no-repeat;
 background-position:right -20px bottom -20px;
 background-size:120px;
