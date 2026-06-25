@@ -103,7 +103,7 @@ pointer-events:none;
 }
 
 /* ========================= */
-/* LOGO PREMIUM */
+/* LOGO PREMIUM DARK GLASS */
 /* ========================= */
 
 .logo{
@@ -115,24 +115,23 @@ pointer-events:none;
 
     position:relative;
 
-    /* GLASS EFFECT */
+    /* 🔥 GLASS GELAP */
     background:linear-gradient(
         135deg,
-        rgba(255,255,255,0.25),
-        rgba(255,255,255,0.08)
+        rgba(20,25,35,0.85),
+        rgba(20,25,35,0.55)
     );
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(14px);
 
-    /* BORDER HALUS */
-    border:1px solid rgba(255,255,255,0.25);
+    /* BORDER DARK GLOW */
+    border:1px solid rgba(255,255,255,0.08);
 
     /* SHADOW DEPTH */
     box-shadow:
-        0 6px 20px rgba(0,0,0,0.25),
-        inset 0 1px 0 rgba(255,255,255,0.3);
+        0 8px 25px rgba(0,0,0,0.5),
+        inset 0 1px 0 rgba(255,255,255,0.05);
 
-    /* BIAR LEBIH HIDUP */
     transition:all .3s ease;
 }
 
@@ -143,9 +142,12 @@ pointer-events:none;
     object-fit:cover;
     position:relative;
     z-index:2;
+
+    /* BIAR MASUK KE DARK */
+    filter:brightness(1.1) contrast(1.05);
 }
 
-/* SHINE EFFECT */
+/* SHINE EFFECT (LEBIH SOFT) */
 .logo::before{
     content:"";
     position:absolute;
@@ -158,11 +160,24 @@ pointer-events:none;
     background:linear-gradient(
         120deg,
         transparent,
-        rgba(255,255,255,0.6),
+        rgba(255,255,255,0.15),
         transparent
     );
 
-    transition:0.6s;
+    transition:0.7s;
+}
+
+/* HOVER */
+.logo:hover::before{
+    left:100%;
+}
+
+.logo:hover{
+    transform:translateY(-2px) scale(1.03);
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.7),
+        0 0 12px rgba(0,150,255,0.15);
 }
 
 /* MENU BUTTON ULTRA */
